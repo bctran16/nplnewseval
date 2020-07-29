@@ -14,6 +14,10 @@ module.exports = {
                 test: '/\.js$/',
                 exclude: /node_modules/,
                 loader: "babel-loader"
+            }, 
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
             }
         ]
     },
@@ -31,5 +35,9 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         })
-    ]
+    ],
+    output: {
+        libraryTarget: 'var',
+        library: 'Client'
+    }
 }
