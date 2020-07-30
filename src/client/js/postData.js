@@ -15,5 +15,4 @@ const postData = async( url = '', data = {}) => {
         console.log ('error', error);
     }
 }
-
 export { postData }
