@@ -2,13 +2,31 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: mediumpurple;
 }
 
 main {
     flex: 2;
+
 }
 
 section {
     max-width: 800px;
     margin: 50px auto;
+}
+
+form {
+    background-color: gold;
+}
+
+.container {
+    display: grid; 
+    grid-template-rows: 100px 100px 200px;
+}
+
+section .result {
+    background-color: gold;
+    border: 1px solid #545454;
+    border-radius: 3px;
+    padding: 10px;
 }

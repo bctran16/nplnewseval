@@ -6,33 +6,35 @@
     </head>
 
     <body>
+        <div class="container">
+            <header>
+                <h1> Sentiment Analysis</h1>
+            </header>
 
-        <header>
-            <div class="">
-                Logo
-            </div>
-            <div class="">
-                navigation
-            </div>
-        </header>
+            <main>
+                <section >
+                    <form class="" onsubmit="return Client.handleSubmit(event)">
+                        <input id="name" type="text" name="input" placeholder="Please enter a sentence.">
+                        <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                    </form>
+                <section>
 
-        <main>
-            <section>
-                <form class="" onsubmit="return Client.handleSubmit(event)">
-                    <input id="name" type="text" name="input" value="" onblur="onBlur()" placeholder="Name">
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            <section>
+                <section class="result">
+                    <strong>Form Results:</strong>
+                    <div id="results"></div>
+                </section>
+            </main>
+        </div>
 
-            <section>
-                <strong>Form Results:</strong>
-                <div id="results"></div>
-            </section>
-        </main>
-
-        <footer>
-            <p>This is a footer</p>
-        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
 
     </body>
 </html>
